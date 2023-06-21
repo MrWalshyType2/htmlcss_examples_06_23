@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element sizing</title>
+
+    <!-- 
+        Pixels, percentages
+        - pixels are an absolute unit of measurement
+        - percentages are a relative unit of measurement
+          based off of the size of the parent element
+
+        Ems and Rems
+        - ems are a relative font size unit of measurement
+          based off of the size of the parent element
+        - rems are a relative font size unit of measurement, 
+          relative to the root element (html element)
+     -->
+     <style>
+        html {
+            /* font-size reset */
+            font-size: 10px;
+        }
+
+        p {
+            /* line-height: 1.5; */
+            font-size: 1.6rem; 
+            /* 
+                16px, font size is based on the root element.
+
+                In this case, it is 1.6 * 10px = 16px
+            */
+            /* color: #RRGGBB; 
+                - hexadecimal color value
+                - 0-9, A-F (10-15)
+            */
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .box {
+            width: 50%;
+            height: 200px;
+            float: left;
+            font-size: 1.6rem;
+        }
+
+        .box p {
+            /* ems are font-sizes relative to the parent container,
+                not the root element
+            */
+            font-size: 2em; 
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+     </style>
+</head>
+<body>
+    <!-- div.container has a width equivalent to the body here -->
+    <div class="container"> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed inventore illum, voluptatum ipsam sunt praesentium pariatur dicta omnis aliquid eligendi.</p>
+        <div class="box red">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, dolor laboriosam. Quis, exercitationem impedit nobis fugiat commodi minus assumenda accusantium.</p>
+        </div>
+        <div class="box green"></div>
+    </div>
+</body>
+</html>

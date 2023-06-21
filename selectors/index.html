@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+
+    <!-- Embedded styles
+        - style rules embedded in a HTML document using the 
+          <style> element
+    -->
+    <style>
+        table {
+            border: solid 1px black;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: solid 1px black;
+            padding: 5px; 
+        }
+
+        th {
+            text-align: left; /* default is center */
+            background-color: burlywood;
+        }
+
+        /* select any p element that is a descendent of a div, 
+            regardless of how nested it is
+        */
+        div p {
+            background-color: lightblue;
+        }
+
+        /* only select direct children of an element
+            - try move this style rule above the "div p", previous, one
+              and note what happens
+        */
+        div > p {
+            background-color: lightgreen;
+        }
+
+        /* adjacent selector
+            - select only paragraph elements which immediately
+              follow a h1 in this example
+        */
+        h1 + p {
+            background-color: lightcoral;
+        }
+
+        /* sibling selector
+            - will style all direct children of a specific selected element,
+        */
+        /* h1 ~ p {
+            font-size: 20px;
+        } */
+
+        #title, .subtitle {
+            text-align: center;
+        }
+
+        .subtitle {
+            color: slateblue;
+        }
+
+        /* containerOfElement > elementType:last-child */
+        #pseudoTarget > p:first-child {
+            background-color: lightpink;
+        }
+
+        .nav > a {
+            display: inline-block;
+            padding: 10px;
+            background-color: lightblue;
+            text-decoration: none;
+            color: black;
+            border: solid 1px black;
+        }
+
+        .nav > a:hover {
+            background-color: lightgreen;
+        }
+
+        .nav > a:visited {
+            color: purple;
+        }
+    </style>
+
+    <!-- External style sheets
+        - we can use the <link> element to link to an 
+          external style sheet (.css file)
+        - prefer this method as it is reusable and leads to 
+          less repetition
+    -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Inline styles 
+        - declared using a style attribute on an element
+        - not recommended as it leads to repetition and is not reusable
+    -->
+    <h1 style="color: red;" id="title">Hello World</h1>
+    <h2 class="subtitle">The subtitle</h2>
+    <p class="important">
+        &amp;&amp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repellat suscipit temporibus asperiores dolores! Cumque obcaecati nemo laboriosam cum doloribus?
+        This is more text, with a <span>SPAN HERE</span> which inherits its properties from the parent 
+        p element. This <span style="background-color: blue;">SPAN</span> overrides the inherited background colour.
+    </p>
+    <p>
+        Not styled by 'h1 + p' as not adjacent to the H1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, temporibus.
+    </p>
+
+    <table>
+        <tr>
+            <th>Some</th>
+            <th>Data</th>
+        </tr>
+        <tr>
+            <td>blah</td>
+            <td>bluh</td>
+        </tr>
+        <tr>
+            <td>foo</td>
+            <td>bar</td>
+        </tr>
+    </table>
+
+    <div id="pseudoTarget">
+        <article>
+            <h2 class="subtitle">Another subtitle</h2>
+            <p>Inner div p element</p>
+            <span>Something</span>
+        </article>
+        <p>Outer div, direct child paragraph element: Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, perspiciatis.</p>
+        <p>Outer div, direct child paragraph element: Aliquid amet esse distinctio. Quasi magnam qui in animi libero.</p>
+        <p>Outer div, direct child paragraph element: Itaque dolores numquam asperiores eveniet perspiciatis iure voluptatibus ipsam iste.</p>
+    </div>
+
+    <p>I'm still a sibling for the selector 'h1 ~ p'</p>
+
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Blog</a>
+    </div>
+</body>
+</html>

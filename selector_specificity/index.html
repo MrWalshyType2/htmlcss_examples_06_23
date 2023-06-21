@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Selector specificity
+            - a weighting to decide the precedence of a selector
+            - selectors with matching precedence override previous selectors
+            - selectors with a greater specificity override selectors with a lower specificity
+
+            Specificity: (id, class, type)
+
+            type {} = 0, 0, 1
+            class {} = 0, 1, 0
+            id {} = 1, 0, 0
+        */
+
+        /* Specificity: 0, 1, 0 */
+        .blue {
+            color: blue;
+        }
+
+        /* Specificity: 1, 0, 0 */
+        #green {
+            color: green;
+        }
+
+        /* Specificity: 0, 0, 1 */
+        p {
+            color: red; 
+        } 
+
+        
+    </style>
+</head>
+<body>
+    <p>This is a paragraph of red text</p>
+    <p class="blue">This is a paragraph of blue text</p>
+    <p id="green">This is a paragraph of green text</p>
+    <p id="green blue" class="blue red">What am I? Green, blue or red?</p>
+</body>
+</html>

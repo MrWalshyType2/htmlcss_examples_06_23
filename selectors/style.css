@@ -1,0 +1,31 @@
+html {
+    font-size: 10px;
+}
+
+/* want all elements to inherit this font size */
+*, *::before, *::after {
+    font-size: inherit;
+}
+
+/* Target the h1 elements and change its size */
+h1 {
+    font-size: 4.8rem; /* 4.8 * 10px */
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+/* Target the p elements and change their size */
+p {
+    text-align: justify;
+    font-size: 2rem; /* rem is based off of the font size in the root element, the html element */
+    line-height: 1.5;
+}
+
+
+
+.important {
+    font-weight: 700;
+    color: rgb(200, 30, 30);
+}
