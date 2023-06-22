@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        .navigation-bar {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .navigation-link {
+            list-style-type: none;
+        }
+
+        .navigation-link>a {
+            display: block;
+            width: 100%;
+            padding: 16px;
+
+            text-decoration: none;
+            text-align: center;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        .navigation-link>a:hover {
+            background-color: green;
+            font-weight: 700;
+        }
+
+        @media screen and (min-width: 1024px) {
+            .navigation-link {
+                display: inline-block;
+            }
+
+            .navigation-link>a {
+                width: auto;
+                margin-right: -4px;
+                /* remove gap left-over by inline-block */
+            }
+        }
+
+        .active-link>a {
+            background-color: green;
+            font-weight: 700;
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="navigation-bar">
+            <li class="navigation-link active-link">
+                <a>
+                    Home
+                </a>
+            </li>
+            <li class="navigation-link">
+                <a>
+
+                    Store
+                </a>
+            </li>
+            <li class="navigation-link">
+                <a>
+
+                    Blog
+                </a>
+            </li>
+            <li class="navigation-link">
+                <a>
+
+                    About
+                </a>
+            </li>
+            <li class="navigation-link">
+                <a>
+
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
