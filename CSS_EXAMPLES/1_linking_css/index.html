@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linking CSS</title>
+
+    <!-- embedded css
+         - better than inline, but still suffers from the same issues of duplication
+    -->
+    <style>
+        p {
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            color: blue;
+            background-color: red;
+        }
+
+        body {
+            background-color: lightslategray;
+        }
+    </style>
+
+    <!-- external stylesheet
+         - best practice, helps reduce duplication by introducing a separation of concerns
+    -->
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CSS can be used inline via the style attribute
+         - its not recommended to use this method of styling
+    -->
+    <h1 style="color: yellow;">This is a heading</h1>
+    <p>
+        <em style="color: blue;">
+            Lorem ipsum <strong>dolor</strong>
+        </em> 
+        sit amet consectetur adipisicing elit. Assumenda doloremque nesciunt quo eaque asperiores iste veniam doloribus quaerat rerum eligendi soluta aliquid adipisci voluptatibus repellat aliquam est blanditiis dolorem, consequatur mollitia? Commodi repellat vero deserunt cupiditate facilis doloremque tenetur ratione.
+    </p>
+    <h1>Other heading</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, deleniti rem cumque optio nemo, alias inventore similique porro debitis impedit perspiciatis natus commodi architecto sapiente, soluta molestiae numquam dolore beatae.</p>
+</body>
+</html>

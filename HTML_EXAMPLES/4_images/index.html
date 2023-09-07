@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+</head>
+<body>
+    <h1>Images</h1>
+    <!-- absolute URL for image -->
+    <img 
+        src="https://th.bing.com/th/id/OIP.ADlv_K0e7dJuSpQscWnNTgHaFH?w=298&h=205&c=7&r=0&o=5&dpr=1.1&pid=1.7" 
+        alt="The QA logo made up of the letters Q and A in blue"
+    >
+
+    <!-- relative URL -->
+    <p>Relative image URL</p>
+    <img 
+        src="assets/images/OIP.jpg" 
+        alt="The QA logo made up of the letters Q and A in blue"
+        width="80px"
+    >
+    <!-- images are inline-block elements, they can sit on the same line/row as other content -->
+    <img 
+        src="assets/images/OIP.jpg" 
+        alt="The QA logo made up of the letters Q and A in blue"
+        width="80px"
+    >
+    <!-- 
+        We shouldn't use the width and height attributes, we should use CSS
+        - if setting the width or height, only set 1 of them to maintain 
+          the aspect ratio of the image
+     -->
+
+     <p>Images can be wrapped in anchors</p>
+     <a href="https://qa.com">
+        <img 
+            src="assets/images/OIP.jpg" 
+            alt="The QA logo made up of the letters Q and A in blue"
+            width="60px"
+        >
+     </a>
+</body>
+</html>

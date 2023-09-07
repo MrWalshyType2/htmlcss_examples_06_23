@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+
+    <style>
+        /* id selector */
+        #main-title {
+            font-size: 48px;
+        }
+
+        /* class selector */
+        .sub-title {
+            font-size: 36px;
+        }
+
+        /* attribute selector targeting text input elements */
+        input[type="text"] {
+            border: 1px solid red;
+            width: 100%;
+        }
+
+        /* descendent selector */
+        .descendent-example p {
+            background-color: green;
+        }
+
+        /* child selector */
+        .child-example>p {
+            background-color: green;
+        }
+
+        /* adjacent sibling selector */
+        .adjacent-heading + p {
+            background-color: green;
+        }
+
+        /* general sibling selector */
+        .general-sibling-heading ~ p {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- id and class selectors -->
+    <h1 id="main-title">
+        Page title, appears once
+    </h1>
+    <h2 class="sub-title">
+        Sub title, appears multiple times
+    </h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sit voluptas voluptate commodi, aspernatur tempore
+        blanditiis possimus tempora aliquid animi.</p>
+
+    <h2 class="sub-title">
+        Sub title, second one
+    </h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sit voluptas voluptate commodi, aspernatur tempore
+        blanditiis possimus tempora aliquid animi.</p>
+
+    <!-- attribute selector -->
+    <input type="text">
+
+    <!-- descendent example -->
+    <h2>Descendent example</h2>
+    <div class="descendent-example">
+        <p>
+            This text will be affected.
+        </p>
+        <div>
+            <p>
+                This will also be affected.
+            </p>
+        </div>
+    </div>
+
+    <!-- child selector -->
+    <h2>Child selector</h2>
+    <div class="child-example">
+        <p>
+            This text will be affected.
+        </p>
+        <div>
+            <p>
+                This will not be affected.
+            </p>
+        </div>
+    </div>
+
+    <!-- adjacent sibling selector -->
+    <h2 class="adjacent-heading">Adjacent sibling selector</h2>
+    <p>
+        This text will be affected.
+    </p>
+    <p>
+        This will not be affected.
+    </p>
+
+    <!-- general sibling selector -->
+    <h2 class="general-sibling-heading">
+        The heading
+    </h2>
+    <p>
+        This text will be affected.
+    </p>
+    <p>
+        This text will also be affected.
+    </p>
+    <div>
+        <p>
+            This will not be affected as it is not at the same level in the hiearchy, it is nested inside a div.
+        </p>
+    </div>
+    <p>
+        But this will be...
+    </p>
+</body>
+
+</html>

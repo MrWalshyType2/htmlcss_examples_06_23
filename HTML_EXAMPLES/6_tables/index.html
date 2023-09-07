@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+
+<body>
+    <!-- Basic table
+         - consists of just table rows, table cells and table headers
+    -->
+    <h2>Basic table</h2>
+    <table style="text-align: left;">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Date of birth</th>
+        </tr>
+        <tr>
+            <td>user123</td>
+            <td>user123@mail.com</td>
+            <td><time datetime="1987-04-17">17/04/1987</time></td>
+        </tr>
+        <tr>
+            <td>user356</td>
+            <td>user356@mail.com</td>
+            <td><time datetime="1994-09-23">23/09/1994</time></td>
+        </tr>
+    </table>
+
+    <h2>Spanning multiple columns</h2>
+    <table>
+        <tr>
+            <th scope="col">
+                Item
+            </th>
+            <th scope="col">
+                Quantity
+            </th>
+            <th scope="col">
+                Cost
+            </th>
+        </tr>
+        <tr>
+            <td>
+                6 pack apples
+            </td>
+            <td>
+                1
+            </td>
+            <td>
+                £1.70
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Chocolate Orange
+            </td>
+            <td>
+                3
+            </td>
+            <td>
+                £1.00
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" colspan="2">
+                Total
+            </th>
+            <td>
+                £4.70
+            </td>
+        </tr>
+    </table>
+
+    <h2>Spanning multiple rows</h2>
+    <table>
+        <tr>
+            <th scope="col">
+                Username
+            </th>
+            <th scope="col" colspan="2">
+                Email
+            </th>
+            <th scope="col">
+                Date of birth
+            </th>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                user123
+            </td>
+            <th scope="row">
+                Primary:
+            </th>
+            <td>
+                user123@mail.com
+            </td>
+            <td> 
+                <time datetime="1987-04-17">
+                    17/04/1987
+                </time>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                Secondary:
+            </th>
+            <td>
+                user123alt@mail.com
+            </td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">
+                user356
+            </td>
+            <th scope="row">
+                Primary:
+            </th>
+            <td>
+                user356@mail.com
+            </td>
+            <td> <time datetime="1987-04-17">
+                    23/09/1994
+                </time>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">
+                Secondary:
+            </th>
+            <td> </td>
+        </tr>
+    </table>
+
+    <h2>Semantically well-structured table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">
+                    Username
+                </th>
+                <th scope="col">
+                    Email
+                </th>
+                <th scope="col">
+                    Date of birth
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    user123
+                </td>
+                <td>
+                    user@mail.com
+                </td>
+                <td>
+                    <time datetime="1987-04-17">
+                        17/04/1987
+                    </time>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row" colspan="2">
+                    Number of users
+                </th>
+                <td>
+                    1
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

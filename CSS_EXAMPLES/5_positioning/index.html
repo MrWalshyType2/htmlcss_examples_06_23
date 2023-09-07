@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+
+    <style>
+        .container {
+            /* float: left; */
+            width: 100%;
+
+            /* clearfix */
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+       
+        .fill {
+            width: 50px;
+            height: 50px;
+            margin: 8px;
+            padding: 16px;
+        }
+
+        .rounded-box {
+            background-color: blue;
+            border-radius: 10% 10%;
+            float: right;
+        }
+
+        .cool-box {
+            width: 150px;
+            border-radius: 0 10% 0 10%;
+            background-color: darkgreen;
+            float: left;
+        }
+
+        .circle {
+            background-color: red;
+            border-radius: 50%;
+            float: left;
+        } 
+
+        .ex-navbar {
+            /* clearfix */
+            display: table;
+            clear: both;
+            content: "";
+
+            width: 100%;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .ex-nav-btn {
+            float: right;
+        }
+        
+        .ex-nav-link {
+            padding: 8px;
+            text-decoration: none;
+            color: white;
+            background-color: black;
+        }
+        
+        .ex-nav-link:hover {
+            cursor: pointer;
+            background-color: limegreen;
+        }
+
+        table {
+            position: static;
+        }
+
+        /* scrollbar custom */
+        /* - firefox */
+        * {
+            scrollbar-width: 8px;
+            scrollbar-color: #969696 rgba(131, 30, 255, 0.75); /* track thumb */
+        }
+
+        /* - chrome, edge, safari, etc... */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #969696;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(131, 30, 255, 0.75);
+            border-radius: 10px;
+            box-shadow: 0px 1px 2px rgba(131, 30, 255, 0.75);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(131, 30, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floats -->
+    <div class="container">
+        <div class="rounded-box fill">
+        </div>
+        <div class="circle fill">
+        </div>
+        <div class="cool-box fill">
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit amet eum atque iure alias quaerat sapiente eius illum ea praesentium quam, dolor, deserunt deleniti consectetur, nihil nemo qui explicabo animi eligendi optio mollitia nostrum aperiam temporibus? Earum perspiciatis dolorem, deserunt tempora alias iure vel aliquam tenetur dolorum cumque nam a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero maiores repudiandae fugiat reprehenderit porro mollitia esse neque quisquam, dolorum corrupti.
+        </p>
+    </div>
+
+    <p>Hello world outside</p>
+
+    <h2>nav example with floats</h2>
+    <ul class="ex-navbar">
+        <li class="ex-nav-btn">
+            <a class="ex-nav-link">
+                Contact
+            </a>
+        </li>
+        <li class="ex-nav-btn">
+            <a class="ex-nav-link">
+                About
+            </a>
+        </li>
+        <li class="ex-nav-btn">
+            <a class="ex-nav-link">
+                Store
+            </a>
+        </li>
+        <li class="ex-nav-btn">
+            <a class="ex-nav-link">
+                Home
+            </a>
+        </li>
+    </ul>
+
+    <h2>Overflow example</h2>
+    <div style="
+        height: 200px;
+        overflow: auto;
+    ">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste explicabo ipsum earum pariatur perferendis aliquam aut, ullam expedita architecto nihil labore sequi, quo iusto nulla excepturi, dolorum odit consequuntur deleniti est numquam voluptas? Delectus dicta architecto cumque vero nulla libero unde voluptates explicabo ab debitis quisquam optio soluta voluptatibus labore quis dolorum id, molestiae repellendus alias! Explicabo amet aperiam eligendi, distinctio id fugiat, commodi architecto ipsa, beatae libero dolor magni animi dolorum. Nobis laboriosam, unde porro voluptate laborum consequatur ab cum reprehenderit voluptatum quos sapiente molestiae! Similique assumenda ex consectetur nemo ut minima commodi distinctio sit, libero facilis rerum voluptates iste aut in, aperiam asperiores inventore porro. Magnam necessitatibus ad fugit beatae iusto sequi quos culpa quaerat aspernatur aliquid dignissimos laborum enim minus atque eius repellat ipsa itaque omnis voluptatem, numquam perspiciatis. Id molestiae officia facilis repudiandae praesentium vel, ab eaque quibusdam quas autem fugit totam voluptas incidunt itaque aut. Ea laborum dignissimos nesciunt odit minus autem repellat quidem numquam. Alias sequi vero beatae nisi laborum at distinctio explicabo modi adipisci corrupti enim assumenda ut, omnis natus quae aliquam quisquam, excepturi voluptate ducimus inventore, incidunt obcaecati debitis consectetur. Asperiores, nesciunt? Ratione sequi reprehenderit repellat natus, beatae sapiente dolorem, culpa earum officiis fuga quia nemo molestias nostrum fugiat asperiores eum porro doloribus ipsa deserunt eveniet quas dolores provident esse cupiditate? Officiis dolorum consequuntur, adipisci tempore tenetur voluptatem labore ullam magni hic sit beatae omnis deserunt. Dignissimos, maiores aliquam quas laudantium repudiandae iure necessitatibus suscipit explicabo? Rem molestias voluptates ipsum fugit est, aspernatur quibusdam quae culpa, omnis iste magni id dolorum deleniti vero! Deserunt perferendis corporis ullam placeat molestias, reprehenderit esse eligendi delectus, eum rem velit fugit? Et temporibus cum voluptates, corporis sint tenetur eligendi laboriosam accusamus praesentium voluptatibus natus eius, labore iusto suscipit quos! Sint nihil, voluptatum dolores tenetur tempore nostrum?</p>
+    </div>
+
+    <h2>Display example</h2>
+    <p style="display:none;">Remove an element from the DOM by settings its display type to none</p>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        .row::after {
+            /* apply clearfix for floated elements */
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding-right: 16px;
+        }
+
+        [class*="col-"]:last-of-type {
+            padding-right: 0;
+        }
+
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        @media screen and (min-width: 768px) {
+            .col-md-1 {width: 8.33%;}
+            .col-md-2 {width: 16.66%;}
+            .col-md-3 {width: 25%;}
+            .col-md-4 {width: 33.33%;}
+            .col-md-5 {width: 41.66%;}
+            .col-md-6 {width: 50%;}
+            .col-md-7 {width: 58.33%;}
+            .col-md-8 {width: 66.66%;}
+            .col-md-9 {width: 75%;}
+            .col-md-10 {width: 83.33%;}
+            .col-md-11 {width: 91.66%;}
+            .col-md-12 {width: 100%;}
+        }
+
+        @media screen and (min-width: 1024px) {
+            .col-lg-1 {width: 8.33%;}
+            .col-lg-2 {width: 16.66%;}
+            .col-lg-3 {width: 25%;}
+            .col-lg-4 {width: 33.33%;}
+            .col-lg-5 {width: 41.66%;}
+            .col-lg-6 {width: 50%;}
+            .col-lg-7 {width: 58.33%;}
+            .col-lg-8 {width: 66.66%;}
+            .col-lg-9 {width: 75%;}
+            .col-lg-10 {width: 83.33%;}
+            .col-lg-11 {width: 91.66%;}
+            .col-lg-12 {width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+            <h2>Column 1</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente ducimus praesentium, minima voluptate voluptates vitae, error, odio ea dolorem quaerat odit accusantium illo iusto aliquid mollitia pariatur exercitationem. Laudantium dignissimos modi, accusamus mollitia aliquam distinctio amet possimus vel voluptatum neque provident excepturi ipsum voluptatem facere quidem, beatae est ipsam reprehenderit!</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <h2>Column 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, doloribus repudiandae! Et, eos corporis modi aut magni, excepturi nulla ex libero unde fugiat eveniet minus nostrum dolorum error minima adipisci rem consequatur pariatur cum culpa! Odio praesentium neque ipsum quo facilis ipsa laborum, qui ad repellendus, at voluptas commodi fuga!</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <h2>Column 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nulla, nihil repudiandae hic voluptas voluptates accusamus vero ducimus doloribus aperiam ipsum, quisquam libero, recusandae excepturi et. Quod autem quos repellendus possimus veniam! Nostrum itaque consectetur dicta saepe! Ratione ea cupiditate, ut sunt nulla necessitatibus consequatur, quos, nisi nemo recusandae quod.</p>
+        </div>
+    </div>
+</body>
+</html>

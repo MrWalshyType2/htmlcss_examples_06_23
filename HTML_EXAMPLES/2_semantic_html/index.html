@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML</title>
+</head>
+<body>
+    <!-- Our web pages need structure
+         - we could use divisible content blocks, a <div>, but that doesn't
+            tell screen readers or search engines anything about the content
+         - a <div> doesn't have meaning, it's just a block of content
+        - a <div> is useful for styling CSS or being targeted
+          by JavaScript for dynamic behaviours
+    -->
+    <!-- <div>
+        <h2>A section represented as a div</h2>
+        <p>Not very semantic, screen reader and other accessibility tools will ignore the div element.</p>
+    </div> -->
+
+    <!-- HTML5 introduced a number of semantic elements
+         - these elements have meaning, and are used to describe the content
+    -->
+    <header>
+        <h1>QA Learning Portal</h1>
+    </header>
+    <nav>
+        <a>Home</a>
+        <a>Course</a>
+        <a>Resources</a>
+    </nav>
+
+    <div>
+        <h2>div</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis quibusdam officia saepe, est nesciunt maxime quia! Repellat, labore in.</p>
+    </div>
+
+    <main>
+        <section>
+            <header>
+                <h2>About your learning portal</h2>
+            </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nam dolores voluptatum soluta odit, autem officia fugiat, corrupti error quisquam mollitia distinctio deserunt aperiam quos dicta? Aperiam exercitationem rem quas, obcaecati neque quisquam repellat iste ipsa totam? Laboriosam reiciendis, sequi voluptatum vel aspernatur accusantium dolore dolorem libero deleniti corrupti rerum!</p>
+        </section>
+
+        <section>
+            <header>
+                <h2>Recent messages from your tutor</h2>
+                <small>Please remember to check your messages daily for updates...</small>
+            </header>
+
+            <article>
+                <h3>Remember to submit x work...</h3>
+                <p>Hi xxxx, the due date for your project is xxxxx</p>
+            </article>
+
+            <article>
+                <h3>Enter to win a xxxx</h3>
+                <p>We are holding a competition to....</p>
+            </article>
+
+            <article>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores similique aut dignissimos, molestias, rem explicabo excepturi vitae obcaecati vel debitis, iste minima. Aut, deleniti alias facere quidem earum accusantium dignissimos ea tempora perferendis reiciendis deserunt modi optio similique recusandae nisi expedita necessitatibus assumenda placeat ut nihil excepturi hic magni repellat.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <small>QA ltd. &copy; 2023</small>
+    </footer>
+</body>
+</html>

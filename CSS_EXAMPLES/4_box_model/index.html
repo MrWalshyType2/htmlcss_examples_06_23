@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+
+            padding: 16px;
+            border: 12px solid rgb(120, 33, 77);
+            margin: 16px;
+        }
+
+        #span-target {
+            width: 300px;
+            height: 300px;
+            /* inline elements ignore width and height */
+
+            /* display property is used to change the outer display type of an element */
+            /* display: block; */
+        }
+
+        .box-alt {
+            width: 200px;
+            height: 200px;
+            margin: 8px; 
+            padding: 16px; 
+            border-width: 4px;
+            border-style: solid;
+            border-color: black;
+            border-left: 8px dashed white;
+            border-right: 8px dashed white;
+        }
+
+        .navbar {
+            margin: 0px;
+            padding: 0px;
+            background-color: lightslategray;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+
+        .nav-link {
+            display: inline-block; /* make the anchor an inline-block element */
+            text-decoration: none; /* remove the underline from anchor */
+            padding: 16px; /* add some padding to the anchor */
+            margin-right: -4px; /* remove the space between the anchors */
+            background-color: lightslategray;
+            color: whitesmoke;
+        }
+
+        .nav-link:hover {
+            background-color: darkslategray;
+        }
+
+        .centre {
+            margin: 0 auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Contact</a>
+    </nav>
+
+    <div class="centre">
+        <div>
+            <p>This is a block element, and so is a div.</p>
+            <p>A paragraph is a block element, but a <span id="span-target" style="color: red;">span</span> is an inline element.</p>
+        </div>
+    
+        <div class="box"></div>
+    
+        <div style="display: inline-block; 
+                    width: 200px;
+                    height: 200px;
+                    margin: 0px; 
+                    padding: 16px; 
+                    border: 5px solid black; 
+                    background-color: blue;"></div>
+        <div style="display: inline-block; 
+                    width: 200px; 
+                    height: 200px; 
+                    margin: 0px;
+                    margin-left: -4px; 
+                    padding: 16px; 
+                    border: 5px solid black; 
+                    background-color: red;"></div>
+    
+        <div class="box-alt" style="background-color: red;"></div>
+    </div>
+
+</body>
+</html>

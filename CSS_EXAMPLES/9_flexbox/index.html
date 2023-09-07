@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            background-color: red;
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+        }
+
+        .flex-row-example {
+            background-color: aqua;
+            height: 200px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .flex-column-example {
+            background-color: aqua;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+
+            justify-content: start;
+            align-items: center;
+        }
+
+        .flex-wrap-example > .box {
+            flex-basis: 33%;
+            flex-grow: 1;
+            
+        }
+
+        .flex-wrap-example {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex row</h2>
+    <div class="flex-row-example">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <h2>Flex column</h2>
+    <div class="flex-column-example">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <h2>Flex wrap</h2>
+    <div class="flex-wrap-example">
+        <div class="box">1</div>
+        <div class="box" style="flex-grow: 3">2</div>
+        <div class="box">3</div>
+    </div>
+</body>
+</html>

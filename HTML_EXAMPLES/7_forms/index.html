@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <form action="https://www.google.com/search" method="get">
+        <!-- Each form input should have a label for accessiblity purposes
+            - the labels for attribute should match the id of the input
+        -->
+        <div>
+            <label for="searchtext">Google search:</label>
+            <input type="search" name="q" id="searchtext" />
+        </div>
+        <div>
+            <input type="submit" value="Search" />
+            <button type="reset">Clear</button>
+        </div>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Login details</legend>
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Personal information</legend>
+            <div>
+                <label for="dateOfBirth">Date of birth:</label>
+                <input type="date" id="dateOfBirth" name="dob">
+            </div>
+            <div>
+                <label for="faveColour">Favorite colour</label>
+                <input type="color" id="faveColour" name="colour">
+            </div>
+        </fieldset>
+
+        <div>
+            <input type="submit" value="Search" />
+            <button type="reset">Clear</button>
+        </div>
+    </form>
+</body>
+
+</html>

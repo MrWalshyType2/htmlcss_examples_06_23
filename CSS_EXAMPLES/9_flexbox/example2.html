@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body { margin: 0; }
+        
+        nav {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+
+        nav > a {
+            padding: 10px;
+            background-color: aqua;
+            border: 1px solid black;
+            text-decoration: none;
+        }
+
+        #main-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #main-container, footer {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 1024px) {
+            nav {
+                flex-direction: row;
+            }
+
+            #main-container {
+                flex-direction: row;
+            }
+
+            #main-container > aside {
+                flex-basis: 20%;
+                padding: 8px;
+            }
+
+            #main-container > main {
+                flex-basis: 80%;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </nav>
+
+    <!-- main -->
+    <div id="main-container">
+        <aside>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta obcaecati cumque facilis officiis praesentium in temporibus dolores dolorum repellat minus!</p>
+        </aside>
+        <main>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, provident!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus deserunt debitis animi doloremque quo reiciendis at excepturi quis, voluptates sunt, alias, possimus ad exercitationem qui. Optio, temporibus reprehenderit odio at ea excepturi dolorum aspernatur laborum similique harum earum nemo quasi?</p>
+            <p>Impedit dolores dolorem commodi delectus explicabo eveniet similique tenetur veritatis quia cupiditate quisquam, deserunt blanditiis consequuntur repellat voluptas odio eaque harum odit quas ipsum molestias! Quaerat temporibus consectetur odit culpa. Iste distinctio facere repellendus! Voluptatibus sed vitae assumenda sequi consequatur?</p>
+            <p>Provident, tempora sequi esse est, dolore voluptatum necessitatibus cumque illum amet rerum soluta, sit tempore! Eos esse impedit eum dolore. Quas a hic molestias esse, quidem iusto saepe corrupti, rerum, minima doloribus vitae et odit eveniet voluptas temporibus? Ipsam, adipisci?</p>
+            <p>Ipsam blanditiis quia adipisci veniam. Unde soluta, accusamus aut maxime obcaecati atque reiciendis optio numquam deserunt rem pariatur ullam, inventore nostrum neque totam voluptates praesentium? Commodi reiciendis deserunt atque alias saepe sunt, eligendi unde iusto doloribus autem aliquam distinctio voluptas.</p>
+        </main>
+    </div>
+
+    <footer>
+        <small>Copyright &copy; 2023</small>
+    </footer>
+</body>
+</html>
